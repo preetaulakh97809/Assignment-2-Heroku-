@@ -1,0 +1,51 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+
+<!-- Content for the Add page -->
+
+<section>
+    <div class="container">
+        <form  action="/contact-list/edit" method="POST">
+            <div class="control-group">
+                <div class="form-group">
+                    <input class="form-control" id="id" name="id" value="<%= ContactList.id %>" type="hidden" />
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="form-group">
+                    <label for="name">Contact Name</label>
+                    <input class="form-control" id="name" name="name" type="text" value="<%= ContactList.name %>" placeholder="Book Name" />
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="form-group">
+                    <label for="contactNumber">Contact Number</label>
+                    <input class="form-control" id="contactNumber" name="contactNumber" type="text" value="<%= ContactList.contactNumber %>" placeholder="Book Author" />
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="form-group">
+                    <label for="emailAddress">Email Address</label>
+                    <input class="form-control" id="emailAddress" name="emailAddress" type="text" value="<%= ContactList.emailAddress %>" placeholder="Published" />
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" btn-xl btn-block>
+                    Update Contact
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<%- include ../partials/bottom_nav.ejs %>  
+
+<%- include ../partials/footer.ejs %>

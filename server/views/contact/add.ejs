@@ -1,0 +1,45 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+
+<!-- Content for the Add page -->
+<section>
+    <div class="container">
+        <form  action="/contact-list/add" method="POST">
+            <div class="control-group">
+                <div class="form-group">
+                    <label for="name">Contact Name</label>
+                    <input class="form-control" id="name" name="name" type="text" placeholder="Contact Name" />
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="form-group">
+                    <label for="contactNumber">Contact Number</label>
+                    <input class="form-control" id="contactNumber" name="contactNumber" type="text" placeholder="Contact Number" />
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="form-group">
+                    <label for="emailAddress">Email Address</label>
+                    <input class="form-control" id="emailAddress" name="emailAddress" type="text" placeholder="Email Address" />
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" btn-xl btn-block>
+                    Add Contact
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<%- include ../partials/bottom_nav.ejs %>
+
+<%- include ../partials/footer.ejs %>

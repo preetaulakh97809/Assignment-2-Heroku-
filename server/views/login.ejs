@@ -1,0 +1,48 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+  
+
+ <!--Header-->
+ <section id="contact">
+  <div class="container">
+    <h2 class="text-center text-uppercase text-secondary mb-0">
+      Login
+    </h2>
+    <hr class="star-dark mb-5" />
+  
+        <form name="sentMessage" id="loginForm" action="/login" method="POST">
+          <div class="control-group">
+            <div class="form-group floting-label-form-group controls mb-0 pb-2">
+              <label for="userName">UserName</label>
+              <input class="form-control" id="userName" name="userName" type="text" placeholder="User Name" />
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="form-group floting-label-form-group controls mb-0 pb-2">
+              <label for="password">Password</label>
+              <input class="form-control" id="password" name="password" type="password" placeholder="Password" />
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <br />
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" btn-xl btn-block>
+              Login
+            </button>
+          </div>
+        </form>
+  </div>
+</section>
+<!--Footer-->
+<%- include partials/bottom_nav.ejs %>  
+
+<%- include partials/footer.ejs %>
+  
+
+
+
+
